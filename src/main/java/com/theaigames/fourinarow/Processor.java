@@ -113,6 +113,16 @@ public class Processor implements GameHandler {
                 }
                 
                 player.sendUpdate("field", mField.toString());
+				
+				// Print the board at the end of each round
+                System.out.println("Round " + mRoundNumber + " - " + player.getName());
+                String[] rows = mField.toString().split(";");
+                for(String row : rows)
+                {
+                	System.out.println(row);
+                }
+                System.out.println("");				
+				
                 mRoundNumber++;
             }
         }
